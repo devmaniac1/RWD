@@ -473,7 +473,7 @@
 /*******************************/
 
 .section-cta {
-  padding: 9.6rem 0rem;
+  padding: 4.8rem 0rem 12.8rem 0;
 }
 
 .cta {
@@ -540,12 +540,90 @@
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
- 
-.cta-form input::placeholder{
+
+.cta-form input::placeholder {
   color: #aaa;
 }
 
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(253, 242, 233, 0.5);
+}
+
+/*******************************/
+/* FOOTER */
+/*******************************/
+
+.footer {
+  padding: 12.8rem 0rem;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 4rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #767676;
+  /* justify-self: end; */ /*not working */
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
