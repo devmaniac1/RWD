@@ -11,8 +11,9 @@
   align-items: center;
   background-color: #fdf2e9;
 
-  height: 8.4rem;
+  height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -55,6 +56,23 @@
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /*******************************/
@@ -111,7 +129,7 @@
 
 .delivered-text {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .delivered-text span {
@@ -155,7 +173,6 @@
 
 .section-how {
   padding: 9.6rem 0;
-  /* background-color: orangered; */
 }
 
 .step-number {
@@ -171,29 +188,33 @@
 }
 
 .step-img-box {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .step-img-box::before,
 .step-img-box::after {
   content: "";
   display: block;
-  position: absolute;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .step-img-box::before {
   width: 60%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
   padding-bottom: 60%;
+
   background-color: #fdf2e9;
   z-index: -2;
-  /* height: 60%; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(50%, -50%); */
 }
 
 .step-img-box::after {
@@ -201,13 +222,11 @@
   padding-bottom: 45%;
   background-color: #fae5d3;
   z-index: -1;
-  /* top: 50%;
-    left: 50%;
-    transform: translate(50%, -50%); */
 }
 
 .step-img {
   width: 35%;
+  /* z-index: 10; */
 }
 
 /*******************************/
@@ -216,7 +235,6 @@
 
 .section-meals {
   padding: 9.6rem 0;
-  /* background-color: orangered; */
 }
 
 .meal {
@@ -228,11 +246,11 @@
 
 .meal:hover {
   transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-content {
-  padding: 3.2rem 4.8rem;
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
 
 .meal-tags {
@@ -247,7 +265,7 @@
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #333;
-  border-radius: 10rem;
+  border-radius: 100px;
   font-weight: 600;
 }
 
@@ -272,7 +290,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 .meal-attribute {
@@ -327,7 +345,7 @@
 
 .testimonial-text {
   font-size: 1.8rem;
-  line-height: 1.3;
+  line-height: 1.8;
   margin-bottom: 1.6rem;
 }
 
@@ -358,7 +376,7 @@
 }
 
 /*******************************/
-/* TESTIMONIALS SECTION */
+/* PRICING */
 /*******************************/
 
 .section-pricing {
@@ -384,7 +402,7 @@
 }
 
 .pricing-plan--complete {
-  justify-self:start;
+  justify-self: start;
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
@@ -468,24 +486,27 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
-
 /*******************************/
 /* CTA SECTION */
 /*******************************/
 
 .section-cta {
-  padding: 4.8rem 0rem 12.8rem 0;
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
 }
 
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
+
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
-
-  /* height: 50rem; */
 }
 
 .cta-text-box {
@@ -494,7 +515,8 @@
 }
 
 .cta .heading-secondary {
-  color: #45260a;
+  /* color: #45260a; */
+  color: inherit;
   margin-bottom: 3.2rem;
 }
 
@@ -517,7 +539,7 @@
 
 .cta-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
 }
@@ -548,7 +570,7 @@
 
 .cta *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(253, 242, 233, 0.5);
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
 /*******************************/
@@ -556,7 +578,7 @@
 /*******************************/
 
 .footer {
-  padding: 12.8rem 0rem;
+  padding: 12.8rem 0;
   border-top: 1px solid #eee;
 }
 
@@ -571,7 +593,7 @@
 
 .footer-logo {
   display: block;
-  margin-bottom: 4rem;
+  margin-bottom: 3.2rem;
 }
 
 .social-links {
@@ -587,9 +609,8 @@
 
 .copyright {
   font-size: 1.4rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #767676;
-  /* justify-self: end; */ /*not working */
   margin-top: auto;
 }
 
