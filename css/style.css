@@ -383,16 +383,17 @@
   padding: 9.6rem 0rem;
 }
 
-.fix {
+/* .fix {
   padding: 0 7rem;
 }
 
 .font-fix {
   font-size: 1.4rem;
-}
+} */
 
 .pricing-plan {
   border-radius: 1.1rem;
+  width: 75%;
 }
 
 .pricing-plan--starter {

@@ -39,6 +39,9 @@
   .testimonials-container {
     padding: 9.6rem 3.2rem;
   }
+  .pricing-plan--complete::after {
+    right: -9%;
+  }
 }
 
 @media (max-width: 60em) {
@@ -133,5 +136,45 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+  }
+  .pricing-plan--complete::after {
+    top: 4%;
+    right: -10%;
+  }
+}
+
+@media (max-width: 49em) {
+  html {
+    font-size: 43.75%;
+  }
+  /* .pricing-plan--complete::after {
+    top: 4%;
+    right: -10%;
+  } */
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-top: 3.2rem;
+  }
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
   }
 }
