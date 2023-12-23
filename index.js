@@ -37,3 +37,5 @@ toggleImg = () =>
     : heroImg.classList.add("hidden");
 
 window.addEventListener("resize", toggleImg);
+
+toggleImg();
